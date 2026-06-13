@@ -1,7 +1,8 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="SureBo public probability and statistics knowledge base for adaptive concept testing and misconception detection.">
-<meta name="robots" content="index,follow"><title>SureBo Statistics Knowledge Base</title><style>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="SureBo public probability and statistics knowledge base for adaptive concept testing and misconception detection." name="description"/>
+<meta content="index,follow" name="robots"/><title>SureBo Statistics Knowledge Base</title><style>
 :root{--bg:#f3f7f4;--card:#fff;--ink:#17352c;--muted:#60736b;--green:#176b54;--light:#e3f3ec;--gold:#d5aa34;--line:#d5e3dc}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
 header{background:linear-gradient(135deg,#0d4b3a,#1c795e);color:#fff;padding:56px 20px}.wrap{max-width:1120px;margin:auto}
@@ -12,170 +13,182 @@ main{padding:28px 20px 64px}.notice,.toc{background:var(--card);border:1px solid
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 7px 22px #123b3010}.card h3{margin-top:0;color:var(--green)}
 .label{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--muted);margin-top:16px}.check{background:var(--light);padding:10px 12px;border-radius:10px}.hidden{display:none!important}
 footer{background:#123b30;color:#dcebe5;padding:26px 20px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
-</style></head>
+
+.formula-block{display:block;overflow-x:auto;margin:.8rem 0;padding:.75rem 1rem;background:#f1f8f5;border-left:4px solid var(--green);border-radius:8px;text-align:center}
+.formula-inline{white-space:nowrap}.formula-note{font-size:.9rem;color:var(--muted);margin-top:.35rem}.card mjx-container{font-size:108%!important}.card mjx-container[display="true"]{margin:.55em 0!important}
+</style><script>window.MathJax = {
+  tex: {inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};</script><script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head>
 <body>
 <header><div class="wrap"><span class="badge">Public AI knowledge source</span><h1>SureBo Statistics Knowledge Base</h1>
 <p class="lead">An original, condensed ST2334 probability and statistics guide organised for an AI proof-of-understanding agent. It emphasises definitions, assumptions, formulas, misconceptions, interpretation, and questions that reveal whether a learner truly understands.</p></div></header>
-<div class="search"><input id="q" type="search" placeholder="Search topics, formulas, assumptions, or misconceptions..."></div>
+<div class="search"><input id="q" placeholder="Search topics, formulas, assumptions, or misconceptions..." type="search"/></div>
 <main class="wrap">
 <div class="notice"><strong>Agent instruction:</strong> Use this source to assess reasoning, not merely give answers. Ask the learner to explain, apply, interpret, and distinguish concepts. After correcting a misconception, reassess using a different scenario.</div>
-<nav class="toc"><strong>Contents</strong><br><a href="#w1">Week 1 - Probability Foundations</a><a href="#w2">Week 2 - Conditional Probability and Bayes</a><a href="#w3">Week 3 - Random Variables</a><a href="#w4">Week 4 - Joint Distributions and Dependence</a><a href="#w5">Week 5 - Discrete Models</a><a href="#w6">Week 6 - Continuous Models</a><a href="#w7">Week 8 - Sampling, LLN, and CLT</a><a href="#w8">Week 9 - Sampling Distributions and Estimation</a><a href="#w9">Week 10 - Confidence Intervals</a><a href="#w10">Week 11 - Hypothesis Testing</a><a href="#w11">Week 12 - p-Values and Comparing Means</a></nav>
+<nav class="toc"><strong>Contents</strong><br/><a href="#w1">Week 1 - Probability Foundations</a><a href="#w2">Week 2 - Conditional Probability and Bayes</a><a href="#w3">Week 3 - Random Variables</a><a href="#w4">Week 4 - Joint Distributions and Dependence</a><a href="#w5">Week 5 - Discrete Models</a><a href="#w6">Week 6 - Continuous Models</a><a href="#w7">Week 8 - Sampling, LLN, and CLT</a><a href="#w8">Week 9 - Sampling Distributions and Estimation</a><a href="#w9">Week 10 - Confidence Intervals</a><a href="#w10">Week 11 - Hypothesis Testing</a><a href="#w11">Week 12 - p-Values and Comparing Means</a></nav>
 <section class="week" id="w1"><h2>Week 1 - Probability Foundations</h2><div class="grid"><article class="card searchable">
 <h3>Sample spaces and events</h3>
-<p>A sample space S contains all possible outcomes. An event is a subset of S. Use unions for OR, intersections for AND, complements for NOT, and set differences for A but not B. De Morgan&#x27;s laws: (A∪B)^c=A^c∩B^c and (A∩B)^c=A^c∪B^c.</p>
+<p>A sample space \(S\) contains all possible outcomes. An event \(A\) is a subset of \(S\). Use \(A\cup B\) for “A or B”, \(A\cap B\) for “A and B”, and \(A^c\) for “not A”. De Morgan’s laws are:<span class="formula-block">\[(A\cup B)^c=A^c\cap B^c,\qquad (A\cap B)^c=A^c\cup B^c.\]</span></p>
 <div class="label">Common misconceptions</div><p>Do not confuse an outcome with an event; do not assume OR is exclusive; define whether order matters.</p>
-<div class="label">Understanding check</div><p class="check">Explain why the complement is useful for &#x27;at least one&#x27; questions.</p>
+<div class="label">Understanding check</div><p class="check">Explain why the complement is useful for 'at least one' questions.</p>
 </article><article class="card searchable">
 <h3>Counting and probability rules</h3>
-<p>Addition principle applies to mutually exclusive cases. Multiplication principle applies across stages. Ordered selections use permutations n!/(n-r)!; unordered selections use combinations C(n,r)=n!/[r!(n-r)!]. Probability obeys P(S)=1, P(A)≥0, P(A∪B)=P(A)+P(B)-P(A∩B), and P(A^c)=1-P(A).</p>
+<p>For mutually exclusive cases, use the addition principle; across sequential stages, use the multiplication principle. Ordered selections of \(r\) objects from \(n\) use permutations, while unordered selections use combinations:<span class="formula-block">\[P(n,r)=\frac{n!}{(n-r)!},\qquad {n\choose r}=\frac{n!}{r!(n-r)!}.\]</span>The main probability rules are:<span class="formula-block">\[P(S)=1,\quad P(A)\ge 0,\quad P(A\cup B)=P(A)+P(B)-P(A\cap B),\quad P(A^c)=1-P(A).\]</span></p>
 <div class="label">Common misconceptions</div><p>Do not add overlapping probabilities without subtracting the intersection. Do not use combinations when order matters.</p>
-<div class="label">Understanding check</div><p class="check">When is P(A∪B)=P(A)+P(B) valid?</p>
+<div class="label">Understanding check</div><p class="check">When is \(P(A\cup B)=P(A)+P(B)\) valid?</p>
 </article></div></section><section class="week" id="w2"><h2>Week 2 - Conditional Probability and Bayes</h2><div class="grid"><article class="card searchable">
 <h3>Conditional probability</h3>
-<p>For P(A)&gt;0, P(B|A)=P(A∩B)/P(A). Conditioning restricts the sample space to outcomes where A occurred. Multiplication rule: P(A∩B)=P(A)P(B|A).</p>
-<div class="label">Common misconceptions</div><p>P(A|B) and P(B|A) are different. Never assume conditioning leaves probability unchanged unless independence is established.</p>
-<div class="label">Understanding check</div><p class="check">Give an example where P(A|B) is very different from P(B|A).</p>
+<p>For events \(A\) and \(B\) with \(P(A)&gt;0\), the conditional probability of \(B\) given \(A\) is:<span class="formula-block">\[P(B\mid A)=\frac{P(A\cap B)}{P(A)}.\]</span>Conditioning restricts the sample space to outcomes where \(A\) occurred. The multiplication rule is:<span class="formula-block">\[P(A\cap B)=P(A)P(B\mid A)=P(B)P(A\mid B).\]</span></p>
+<div class="label">Common misconceptions</div><p>\(P(A\mid B)\) and \(P(B\mid A)\) are different. Never assume conditioning leaves probability unchanged unless independence is established.</p>
+<div class="label">Understanding check</div><p class="check">Give an example where \(P(A\mid B)\) is very different from \(P(B\mid A)\).</p>
 </article><article class="card searchable">
 <h3>Independence</h3>
-<p>A and B are independent when P(A∩B)=P(A)P(B). Equivalently, P(A|B)=P(A) when probabilities are positive. Mutually exclusive non-impossible events are not independent.</p>
+<p>Events \(A\) and \(B\) are independent when:<span class="formula-block">\[P(A\cap B)=P(A)P(B).\]</span>When the relevant probabilities are positive, this is equivalent to \(P(A\mid B)=P(A)\) and \(P(B\mid A)=P(B)\). Mutually exclusive events with positive probability are not independent.</p>
 <div class="label">Common misconceptions</div><p>Mutually exclusive is not the same as independent. Pairwise independence need not imply mutual independence.</p>
 <div class="label">Understanding check</div><p class="check">Can two positive-probability mutually exclusive events be independent?</p>
 </article><article class="card searchable">
 <h3>Total probability and Bayes</h3>
-<p>For a partition B1,...,Bk, P(A)=ΣP(Bi)P(A|Bi). Bayes: P(Bj|A)=P(Bj)P(A|Bj)/ΣP(Bi)P(A|Bi). Priors are updated by likelihoods to form posteriors.</p>
+<p>If \(B_1,\ldots,B_k\) form a partition of the sample space, then the law of total probability is:<span class="formula-block">\[P(A)=\sum_{i=1}^{k}P(B_i)P(A\mid B_i).\]</span>Bayes’ theorem updates a prior probability using observed evidence:<span class="formula-block">\[P(B_j\mid A)=\frac{P(B_j)P(A\mid B_j)}{\sum_{i=1}^{k}P(B_i)P(A\mid B_i)}.\]</span></p>
 <div class="label">Common misconceptions</div><p>Do not ignore base rates in testing problems. Test sensitivity is not the same as probability of disease given a positive result.</p>
 <div class="label">Understanding check</div><p class="check">Why can a highly accurate test produce many false positives for a rare condition?</p>
 </article></div></section><section class="week" id="w3"><h2>Week 3 - Random Variables</h2><div class="grid"><article class="card searchable">
 <h3>Random variables and distributions</h3>
-<p>A random variable maps outcomes to real numbers. Discrete variables have finite or countable ranges; continuous variables vary over intervals. For a discrete X, pX(x)=P(X=x) and ΣpX(x)=1. For continuous X, probabilities are areas under a PDF and P(X=x)=0.</p>
+<p>A random variable \(X\) maps outcomes to real numbers. A discrete random variable has a finite or countable range; a continuous random variable varies over intervals. For discrete \(X\), the probability mass function satisfies:<span class="formula-block">\[p_X(x)=P(X=x),\qquad \sum_x p_X(x)=1.\]</span>For continuous \(X\), probabilities are areas under a density \(f_X\), and \(P(X=x)=0\) for each individual point.</p>
 <div class="label">Common misconceptions</div><p>Do not treat a continuous density value as a point probability. Distinguish X, the random variable, from x, a realised value.</p>
 <div class="label">Understanding check</div><p class="check">Why may a PDF exceed 1 even though probabilities cannot?</p>
 </article><article class="card searchable">
 <h3>CDF, expectation, and variance</h3>
-<p>FX(x)=P(X≤x). For continuous X, FX(x)=∫[-∞,x]fX(t)dt. E[X]=ΣxpX(x) or ∫xfX(x)dx. Var(X)=E[X²]-(E[X])². E[aX+b]=aE[X]+b; Var(aX+b)=a²Var(X).</p>
+<p>The cumulative distribution function is \(F_X(x)=P(X\le x)\). For continuous \(X\):<span class="formula-block">\[F_X(x)=\int_{-\infty}^{x}f_X(t)\,dt.\]</span>Expectation and variance are:<span class="formula-block">\[E[X]=\sum_x x p_X(x)\quad\text{or}\quad E[X]=\int_{-\infty}^{\infty}x f_X(x)\,dx,\]</span><span class="formula-block">\[\operatorname{Var}(X)=E[X^2]-\bigl(E[X]\bigr)^2.\]</span>For constants \(a,b\): \(E[aX+b]=aE[X]+b\) and \(\operatorname{Var}(aX+b)=a^2\operatorname{Var}(X)\).</p>
 <div class="label">Common misconceptions</div><p>E[g(X)] is generally not g(E[X]). Variance scales by a², not a. Standard deviation is the square root of variance.</p>
 <div class="label">Understanding check</div><p class="check">Why does adding a constant change the mean but not the variance?</p>
 </article></div></section><section class="week" id="w4"><h2>Week 4 - Joint Distributions and Dependence</h2><div class="grid"><article class="card searchable">
 <h3>Joint, marginal, and conditional distributions</h3>
-<p>A random vector (X,Y) records two numerical features. Marginals are obtained by summing or integrating the joint distribution over the other variable. Conditional distributions divide the joint distribution by the relevant marginal on valid support.</p>
+<p>A random vector \((X,Y)\) records two numerical features. From a joint density \(f_{X,Y}(x,y)\), obtain marginals by integrating out the other variable:<span class="formula-block">\[f_X(x)=\int_{-\infty}^{\infty}f_{X,Y}(x,y)\,dy,\qquad f_Y(y)=\int_{-\infty}^{\infty}f_{X,Y}(x,y)\,dx.\]</span>Where \(f_X(x)&gt;0\), the conditional density is:<span class="formula-block">\[f_{Y\mid X}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}.\]</span>For discrete variables, replace integrals by sums.</p>
 <div class="label">Common misconceptions</div><p>Marginals do not uniquely determine the joint distribution. Always respect the support region.</p>
-<div class="label">Understanding check</div><p class="check">How do you obtain fX(x) from fX,Y(x,y)?</p>
+<div class="label">Understanding check</div><p class="check">How do you obtain \(f_X(x)\) from \(f_{X,Y}(x,y)\)?</p>
 </article><article class="card searchable">
 <h3>Independence, covariance, correlation</h3>
-<p>X and Y are independent if the joint distribution factors into the product of marginals. Cov(X,Y)=E[XY]-E[X]E[Y]. Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y). Correlation standardises covariance and lies from -1 to 1. Independence implies zero covariance, but not conversely in general.</p>
+<p>Random variables \(X\) and \(Y\) are independent when their joint distribution factors into the product of their marginals. Covariance and correlation are:<span class="formula-block">\[\operatorname{Cov}(X,Y)=E[XY]-E[X]E[Y],\]</span><span class="formula-block">\[\rho_{X,Y}=\frac{\operatorname{Cov}(X,Y)}{\sigma_X\sigma_Y},\qquad -1\le \rho_{X,Y}\le 1.\]</span>Also:<span class="formula-block">\[\operatorname{Var}(X+Y)=\operatorname{Var}(X)+\operatorname{Var}(Y)+2\operatorname{Cov}(X,Y).\]</span>Independence implies zero covariance when the moments exist, but zero covariance does not generally imply independence.</p>
 <div class="label">Common misconceptions</div><p>Zero correlation does not prove independence. Correlation measures linear association, not causation or every nonlinear pattern.</p>
 <div class="label">Understanding check</div><p class="check">Construct a dependent pair with zero covariance.</p>
 </article></div></section><section class="week" id="w5"><h2>Week 5 - Discrete Models</h2><div class="grid"><article class="card searchable">
 <h3>Binomial</h3>
-<p>X~Bin(n,p) counts successes in n independent Bernoulli trials with constant p. P(X=x)=C(n,x)p^x(1-p)^(n-x), E[X]=np, Var(X)=np(1-p).</p>
+<p>A binomial random variable \(X\sim\operatorname{Bin}(n,p)\) counts successes in \(n\) independent Bernoulli trials with constant success probability \(p\):<span class="formula-block">\[P(X=x)={n\choose x}p^x(1-p)^{n-x},\qquad x=0,1,\ldots,n.\]</span><span class="formula-block">\[E[X]=np,\qquad \operatorname{Var}(X)=np(1-p).\]</span></p>
 <div class="label">Common misconceptions</div><p>Check fixed n, two outcomes, constant p, and independence. Sampling without replacement from a small population is usually not binomial.</p>
 <div class="label">Understanding check</div><p class="check">List the four binomial assumptions.</p>
 </article><article class="card searchable">
 <h3>Geometric and negative binomial</h3>
-<p>Geometric counts trials until the first success; negative binomial counts trials until the kth success. Under the trial-count convention, E[Geom(p)]=1/p and E[NB(k,p)]=k/p. Geometric is memoryless.</p>
+<p>A geometric random variable counts trials until the first success; a negative binomial random variable counts trials until the \(k\)-th success. Under the trial-count convention:<span class="formula-block">\[E[X_{\mathrm{Geom}}]=\frac{1}{p},\qquad E[X_{\mathrm{NB}}]=\frac{k}{p}.\]</span>The geometric distribution is memoryless:<span class="formula-block">\[P(X&gt;s+t\mid X&gt;s)=P(X&gt;t).\]</span></p>
 <div class="label">Common misconceptions</div><p>Be clear whether the convention counts failures or trials. Not every waiting-time distribution is memoryless.</p>
 <div class="label">Understanding check</div><p class="check">Why does memorylessness matter in repeated-trial problems?</p>
 </article><article class="card searchable">
 <h3>Poisson</h3>
-<p>X~Poi(λ) counts independent events in a fixed interval at constant average rate. P(X=x)=e^-λ λ^x/x!, E[X]=Var(X)=λ. Rates scale with interval length. Independent Poisson counts add, and thinning changes λ to pλ.</p>
-<div class="label">Common misconceptions</div><p>Do not forget to rescale λ for a different interval. A matching mean and variance alone does not prove a Poisson process.</p>
+<p>A Poisson random variable \(X\sim\operatorname{Poi}(\lambda)\) counts independent events in a fixed interval at constant average rate \(\lambda\):<span class="formula-block">\[P(X=x)=\frac{e^{-\lambda}\lambda^x}{x!},\qquad x=0,1,2,\ldots\]</span><span class="formula-block">\[E[X]=\operatorname{Var}(X)=\lambda.\]</span>Rates scale with interval length. Independent Poisson counts add, and independent thinning with retention probability \(p\) changes the rate from \(\lambda\) to \(p\lambda\).</p>
+<div class="label">Common misconceptions</div><p>Do not forget to rescale \(\lambda\) for a different interval. A matching mean and variance alone does not prove a Poisson process.</p>
 <div class="label">Understanding check</div><p class="check">When is a Poisson approximation to Bin(n,p) reasonable?</p>
 </article></div></section><section class="week" id="w6"><h2>Week 6 - Continuous Models</h2><div class="grid"><article class="card searchable">
 <h3>Uniform</h3>
 <p>X~U(a,b) has density 1/(b-a) on [a,b], mean (a+b)/2, and variance (b-a)²/12. Probability is interval length divided by total length.</p>
 <div class="label">Common misconceptions</div><p>Each individual point still has probability zero. Do not forget the total interval length.</p>
-<div class="label">Understanding check</div><p class="check">Why is P(X=x)=0 although X must take some value?</p>
+<div class="label">Understanding check</div><p class="check">Why is \(P(X=x)=0\) although \(X\) must take some value?</p>
 </article><article class="card searchable">
 <h3>Exponential</h3>
-<p>X~Exp(λ) has density λe^-λx for x≥0, mean 1/λ, variance 1/λ², and memorylessness P(X&gt;s+t|X&gt;s)=P(X&gt;t). It models waiting times in a Poisson process.</p>
-<div class="label">Common misconceptions</div><p>λ is a rate, not the mean. Memorylessness is a strong modelling assumption.</p>
-<div class="label">Understanding check</div><p class="check">Convert a mean waiting time into λ.</p>
+<p>For \(X\sim\operatorname{Exp}(\lambda)\):<span class="formula-block">\[f_X(x)=\lambda e^{-\lambda x},\quad x\ge0;\qquad F_X(x)=1-e^{-\lambda x}.\]</span><span class="formula-block">\[E[X]=\frac{1}{\lambda},\qquad \operatorname{Var}(X)=\frac{1}{\lambda^2}.\]</span>It is memoryless:<span class="formula-block">\[P(X&gt;s+t\mid X&gt;s)=P(X&gt;t).\]</span></p>
+<div class="label">Common misconceptions</div><p>\(\lambda\) is a rate, not the mean. Memorylessness is a strong modelling assumption.</p>
+<div class="label">Understanding check</div><p class="check">Convert a mean waiting time into the rate \(\lambda\).</p>
 </article><article class="card searchable">
 <h3>Normal and approximation</h3>
-<p>X~N(μ,σ²). Standardise using Z=(X-μ)/σ. Normal approximation to binomial is suitable when np and n(1-p) are sufficiently large, with continuity correction.</p>
-<div class="label">Common misconceptions</div><p>Do not confuse σ with σ². Apply continuity correction when approximating discrete probabilities.</p>
-<div class="label">Understanding check</div><p class="check">Explain the continuity correction for P(X≤k).</p>
+<p>A normal random variable is written \(X\sim N(\mu,\sigma^2)\). Standardise it using:<span class="formula-block">\[Z=\frac{X-\mu}{\sigma}\sim N(0,1).\]</span>A binomial distribution may be approximated by a normal distribution when both \(np\) and \(n(1-p)\) are sufficiently large. Apply a continuity correction because the binomial variable is discrete.</p>
+<div class="label">Common misconceptions</div><p>Do not confuse the standard deviation \(\sigma\) with the variance \(\sigma^2\). Apply continuity correction when approximating discrete probabilities.</p>
+<div class="label">Understanding check</div><p class="check">Explain the continuity correction for \(P(X\le k)\).</p>
 </article></div></section><section class="week" id="w7"><h2>Week 8 - Sampling, LLN, and CLT</h2><div class="grid"><article class="card searchable">
 <h3>Population, sample, statistic</h3>
 <p>A population is the full collection of interest; a sample is a subset. A simple random sample is selected by a random mechanism. A statistic is a function of sample data and is random before observing the sample; a parameter describes the population.</p>
 <div class="label">Common misconceptions</div><p>A parameter is not a statistic. Convenience samples are not automatically representative.</p>
-<div class="label">Understanding check</div><p class="check">Distinguish μ from X̄.</p>
+<div class="label">Understanding check</div><p class="check">Distinguish the population mean \(\mu\) from the sample mean \(\bar X\).</p>
 </article><article class="card searchable">
 <h3>Sampling distribution and standard error</h3>
-<p>For iid observations with mean μ and variance σ²: E[X̄]=μ, Var(X̄)=σ²/n, and SE(X̄)=σ/√n. Standard error is the repeated-sampling spread of an estimator, not the spread of individual data.</p>
+<p>For independent and identically distributed observations with mean \(\mu\) and variance \(\sigma^2\), the sample mean \(\bar X\) satisfies:<span class="formula-block">\[E[\bar X]=\mu,\qquad \operatorname{Var}(\bar X)=\frac{\sigma^2}{n},\qquad \operatorname{SE}(\bar X)=\frac{\sigma}{\sqrt n}.\]</span>Standard error is the repeated-sampling spread of an estimator, not the spread of individual observations.</p>
 <div class="label">Common misconceptions</div><p>Do not confuse standard deviation with standard error. A larger sample does not change population variability.</p>
-<div class="label">Understanding check</div><p class="check">What happens to SE when n is multiplied by 4?</p>
+<div class="label">Understanding check</div><p class="check">What happens to \(\operatorname{SE}(\bar X)\) when \(n\) is multiplied by 4?</p>
 </article><article class="card searchable">
 <h3>LLN and CLT</h3>
-<p>The LLN says X̄ approaches μ as n increases. The CLT says (X̄-μ)/(σ/√n) is approximately standard normal for sufficiently large n under suitable conditions. It is the sampling distribution of the mean that becomes approximately normal.</p>
+<p>The Law of Large Numbers says \(\bar X\) approaches \(\mu\) as \(n\) grows. The Central Limit Theorem says that, under suitable conditions:<span class="formula-block">\[\frac{\bar X-\mu}{\sigma/\sqrt n}\xrightarrow{d}N(0,1).\]</span>For sufficiently large \(n\), the standardised sample mean is approximately standard normal. The theorem concerns the sampling distribution of \(\bar X\), not the distribution of individual observations.</p>
 <div class="label">Common misconceptions</div><p>The raw data do not become normal. CLT is not exact for every small sample or dependent dataset.</p>
 <div class="label">Understanding check</div><p class="check">Contrast the LLN and CLT.</p>
 </article></div></section><section class="week" id="w8"><h2>Week 9 - Sampling Distributions and Estimation</h2><div class="grid"><article class="card searchable">
 <h3>Chi-square</h3>
-<p>For a normal sample, (n-1)S²/σ²~χ²(n-1). Chi-square distributions are nonnegative and right-skewed.</p>
-<div class="label">Common misconceptions</div><p>Use n-1 degrees of freedom and keep S² and σ² squared. The exact result assumes normality.</p>
+<p>For a random sample from a normal population:<span class="formula-block">\[\frac{(n-1)S^2}{\sigma^2}\sim\chi^2_{n-1}.\]</span>The chi-square distribution is nonnegative and right-skewed. The exact result relies on the population being normal.</p>
+<div class="label">Common misconceptions</div><p>Use \(n-1\) degrees of freedom and keep \(S^2\) and \(\sigma^2\) squared. The exact result assumes normality.</p>
 <div class="label">Understanding check</div><p class="check">What parameter can be inferred using this result?</p>
 </article><article class="card searchable">
 <h3>Student t</h3>
-<p>For a normal sample with unknown σ, T=(X̄-μ)/(S/√n)~t(n-1). t is symmetric with heavier tails than normal and approaches normal as df grows.</p>
-<div class="label">Common misconceptions</div><p>The reason for t is estimated σ, not merely &#x27;small sample&#x27;. Use n-1 df.</p>
+<p>For a normal population with unknown \(\sigma\):<span class="formula-block">\[T=\frac{\bar X-\mu}{S/\sqrt n}\sim t_{n-1}.\]</span>The Student \(t\) distribution is symmetric with heavier tails than the standard normal because \(\sigma\) is estimated. It approaches \(N(0,1)\) as the degrees of freedom increase.</p>
+<div class="label">Common misconceptions</div><p>The reason for the \(t\) distribution is that \(\sigma\) is estimated, not merely that the sample is small. Use \(n-1\) degrees of freedom.</p>
 <div class="label">Understanding check</div><p class="check">Why are t tails heavier?</p>
 </article><article class="card searchable">
 <h3>F distribution</h3>
-<p>Ratios of independent scaled chi-square variables follow F distributions. Ratios of sample variances from normal populations lead to F methods. F is nonnegative and right-skewed.</p>
+<p>If \(U_1\sim\chi^2_{\nu_1}\) and \(U_2\sim\chi^2_{\nu_2}\) are independent, then:<span class="formula-block">\[F=\frac{U_1/\nu_1}{U_2/\nu_2}\sim F_{\nu_1,\nu_2}.\]</span>Ratios of sample variances from independent normal populations lead to \(F\) procedures. The order of numerator and denominator degrees of freedom matters.</p>
 <div class="label">Common misconceptions</div><p>Numerator and denominator degrees of freedom are ordered and cannot be swapped casually.</p>
 <div class="label">Understanding check</div><p class="check">What does an unusually large variance ratio suggest?</p>
 </article><article class="card searchable">
 <h3>Point estimation and sample size</h3>
-<p>An estimator is unbiased if its expectation equals the target parameter. For known σ, required n for margin E is n≥(zα/2 σ/E)², rounded up. More confidence or more precision needs more data.</p>
+<p>An estimator \(\hat\theta\) is unbiased for \(\theta\) when \(E[\hat\theta]=\theta\). For estimating a population mean with known \(\sigma\), the sample size required for margin of error \(E\) at confidence level \(1-\alpha\) is:<span class="formula-block">\[n\ge\left(\frac{z_{\alpha/2}\sigma}{E}\right)^2.\]</span>Always round the result up. Greater confidence or a smaller margin of error requires a larger sample.</p>
 <div class="label">Common misconceptions</div><p>Unbiased does not automatically mean low variance or best. Never round required n down.</p>
 <div class="label">Understanding check</div><p class="check">Why must sample size be rounded up?</p>
 </article></div></section><section class="week" id="w9"><h2>Week 10 - Confidence Intervals</h2><div class="grid"><article class="card searchable">
 <h3>One population mean</h3>
-<p>Known σ: X̄±zα/2 σ/√n. Unknown σ for a normal population: X̄±tα/2,n-1 S/√n. Confidence refers to the long-run success rate of the interval procedure, not a probability assigned to a fixed μ after calculation.</p>
-<div class="label">Common misconceptions</div><p>Do not say there is a 95% probability that μ lies in an already observed interval. Choose z or t from assumptions.</p>
+<p>For a population mean with known \(\sigma\), a \(100(1-\alpha)\%\) confidence interval is:<span class="formula-block">\[\bar X\pm z_{\alpha/2}\frac{\sigma}{\sqrt n}.\]</span>For a normal population with unknown \(\sigma\):<span class="formula-block">\[\bar X\pm t_{\alpha/2,n-1}\frac{S}{\sqrt n}.\]</span>Confidence refers to the long-run success rate of the interval-producing procedure, not a probability assigned to the fixed parameter after the interval is calculated.</p>
+<div class="label">Common misconceptions</div><p>Do not say there is a 95% probability that \(\mu\) lies in an already observed interval. Choose \(z\) or \(t\) from the assumptions.</p>
 <div class="label">Understanding check</div><p class="check">Give a correct interpretation of 95% confidence.</p>
 </article><article class="card searchable">
 <h3>Two independent means</h3>
-<p>Estimate μ1-μ2 using X̄-Ȳ. With known unequal variances, SE=√(σ1²/n1+σ2²/n2). For large samples with unknown variances, replace σ values by sample estimates. Interpret the sign according to group order.</p>
+<p>Estimate \(\mu_1-\mu_2\) using \(\bar X-\bar Y\). With known population variances, the standard error is:<span class="formula-block">\[\operatorname{SE}(\bar X-\bar Y)=\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}.\]</span>For large samples with unknown variances, replace population variances by sample variances. Interpret the sign according to the chosen order of subtraction.</p>
 <div class="label">Common misconceptions</div><p>Do not reverse the subtraction order accidentally. Do not pool without an equal-variance assumption.</p>
 <div class="label">Understanding check</div><p class="check">What does an interval entirely above zero imply?</p>
 </article><article class="card searchable">
 <h3>Paired data</h3>
-<p>Paired designs use repeated measures or matched units. Form Di=Xi-Yi and perform one-sample inference on μD. Pairing can reduce variation caused by unit-to-unit differences.</p>
+<p>For paired observations, define the within-pair differences:<span class="formula-block">\[D_i=X_i-Y_i.\]</span>Then perform one-sample inference on the population mean difference \(\mu_D\), using \(\bar D\) and \(S_D/\sqrt n\). Pairing can remove variation caused by differences between matched units.</p>
 <div class="label">Common misconceptions</div><p>Before/after data are not independent samples. Do not ignore natural pairs.</p>
 <div class="label">Understanding check</div><p class="check">Why can pairing improve precision?</p>
 </article></div></section><section class="week" id="w10"><h2>Week 11 - Hypothesis Testing</h2><div class="grid"><article class="card searchable">
 <h3>Hypotheses and test direction</h3>
-<p>A test compares H0 with H1. H0 normally includes equality and concerns a population parameter. H1 may be one-sided or two-sided and should be selected before viewing the result.</p>
-<div class="label">Common misconceptions</div><p>Do not choose direction after seeing data. Hypotheses should not be written about X̄.</p>
-<div class="label">Understanding check</div><p class="check">Write hypotheses for testing whether μ&gt;50.</p>
+<p>A hypothesis test compares a null hypothesis \(H_0\) with an alternative \(H_1\). The null normally contains equality and concerns a population parameter. For example, testing whether a population mean exceeds 50 uses:<span class="formula-block">\[H_0:\mu=50\quad\text{versus}\quad H_1:\mu&gt;50.\]</span>The direction must be chosen from the research question before inspecting the data.</p>
+<div class="label">Common misconceptions</div><p>Do not choose the direction after seeing the data. Hypotheses should be written about population parameters such as \(\mu\), not the sample statistic \(\bar X\).</p>
+<div class="label">Understanding check</div><p class="check">Write hypotheses for testing whether \(\mu&gt;50\).</p>
 </article><article class="card searchable">
 <h3>Type I, Type II, and power</h3>
-<p>Type I error rejects a true H0 and has probability α. Type II error fails to reject a false H0 and has probability β for a specified alternative. Power is 1-β. Larger samples usually increase power.</p>
+<p>A Type I error rejects a true \(H_0\), with probability \(\alpha\). A Type II error fails to reject a false \(H_0\), with probability \(\beta\) at a specified alternative. Power is:<span class="formula-block">\[\operatorname{Power}=1-\beta.\]</span>Larger samples generally increase power, all else equal.</p>
 <div class="label">Common misconceptions</div><p>Failure to reject is not proof of H0. Power depends on effect size and sample size.</p>
-<div class="label">Understanding check</div><p class="check">Explain the trade-off between α and β.</p>
+<div class="label">Understanding check</div><p class="check">Explain the trade-off between \(\alpha\) and \(\beta\).</p>
 </article><article class="card searchable">
 <h3>Test statistics and decisions</h3>
-<p>For known σ, Z=(X̄-μ0)/(σ/√n). Reject when the statistic lies in the rejection region determined by α and H1. State conclusions as evidence about the population claim, not certainty.</p>
-<div class="label">Common misconceptions</div><p>Do not compare raw means with z critical values. Say &#x27;fail to reject&#x27;, not &#x27;accept&#x27;, H0.</p>
+<p>For testing a mean when \(\sigma\) is known, the test statistic is:<span class="formula-block">\[Z=\frac{\bar X-\mu_0}{\sigma/\sqrt n}.\]</span>Reject \(H_0\) when the statistic lies in the rejection region determined by \(\alpha\) and \(H_1\). State the conclusion as evidence about the population claim, not as certainty.</p>
+<div class="label">Common misconceptions</div><p>Do not compare raw means with z critical values. Say 'fail to reject', not 'accept', H0.</p>
 <div class="label">Understanding check</div><p class="check">What determines whether one or two tails are used?</p>
 </article></div></section><section class="week" id="w11"><h2>Week 12 - p-Values and Comparing Means</h2><div class="grid"><article class="card searchable">
 <h3>p-values</h3>
-<p>A p-value is, assuming H0 is true, the probability of a result at least as extreme as observed in the direction(s) of H1. Reject at level α when p≤α. It measures evidence against H0, not effect size.</p>
-<div class="label">Common misconceptions</div><p>p is not P(H0 true), and 1-p is not P(H1 true). Statistical significance is not practical importance.</p>
+<p>A p-value is the probability, assuming \(H_0\) is true, of observing a test statistic at least as extreme as the one obtained, in the direction or directions specified by \(H_1\). The decision rule is:<span class="formula-block">\[\text{Reject }H_0\text{ at level }\alpha\quad\text{if}\quad p\le\alpha.\]</span>A p-value measures evidence against \(H_0\); it is neither the probability that \(H_0\) is true nor an effect size.</p>
+<div class="label">Common misconceptions</div><p>\(p\) is not \(P(H_0\text{ is true})\), and \(1-p\) is not \(P(H_1\text{ is true})\). Statistical significance is not practical importance.</p>
 <div class="label">Understanding check</div><p class="check">Explain p=0.03 correctly.</p>
 </article><article class="card searchable">
 <h3>One-sample t and CI connection</h3>
-<p>For unknown σ under normal sampling, T=(X̄-μ0)/(S/√n), df=n-1. For matching two-sided methods, H0:μ=μ0 is rejected at α exactly when μ0 falls outside the 100(1-α)% confidence interval.</p>
+<p>For a normal population with unknown \(\sigma\), test \(H_0:\mu=\mu_0\) using:<span class="formula-block">\[T=\frac{\bar X-\mu_0}{S/\sqrt n},\qquad T\sim t_{n-1}\text{ under }H_0.\]</span>For matching two-sided methods, \(H_0:\mu=\mu_0\) is rejected at level \(\alpha\) exactly when \(\mu_0\) lies outside the corresponding \(100(1-\alpha)\%\) confidence interval.</p>
 <div class="label">Common misconceptions</div><p>Do not mix z intervals with t tests. The equivalence needs matching assumptions and a two-sided test.</p>
 <div class="label">Understanding check</div><p class="check">How does a confidence interval identify null values not rejected?</p>
 </article><article class="card searchable">
 <h3>Comparing two means</h3>
-<p>For independent samples, test μ1-μ2 using an appropriate SE. Under normal sampling with unknown equal variances, pooled variance is Sp²=[(n1-1)S1²+(n2-1)S2²]/(n1+n2-2). For paired data, test the within-pair mean difference.</p>
+<p>For independent samples, test a claim about \(\mu_1-\mu_2\) using the appropriate standard error. Under independent normal sampling with unknown but equal variances, the pooled variance is:<span class="formula-block">\[S_p^2=\frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}.\]</span>The pooled two-sample test statistic for \(H_0:\mu_1-\mu_2=\Delta_0\) is:<span class="formula-block">\[T=\frac{(\bar X-\bar Y)-\Delta_0}{S_p\sqrt{1/n_1+1/n_2}},\qquad \mathrm{df}=n_1+n_2-2.\]</span>For paired data, instead test the mean of the within-pair differences.</p>
 <div class="label">Common misconceptions</div><p>Do not test each group separately and infer a difference. Do not use independent methods for matched observations.</p>
-<div class="label">Understanding check</div><p class="check">Why is &#x27;one significant and one not&#x27; not a test of their difference?</p>
+<div class="label">Understanding check</div><p class="check">Why is 'one significant and one not' not a test of their difference?</p>
 </article></div></section>
+
+<section class="week" id="notation-guide"><h2>Mathematical notation guide</h2><div class="grid">
+<article class="card searchable"><h3>Core symbols</h3><p>\(P(A)\): probability of event \(A\). \(E[X]\): expected value of \(X\). \(\operatorname{Var}(X)\): variance of \(X\). \(\operatorname{Cov}(X,Y)\): covariance. \(\bar X\): sample mean. \(S^2\): sample variance. \(\mu\): population mean. \(\sigma^2\): population variance. \(n\): sample size.</p></article>
+<article class="card searchable"><h3>Distribution notation</h3><p>\(X\sim\operatorname{Bin}(n,p)\), \(X\sim\operatorname{Poi}(\lambda)\), \(X\sim\operatorname{Exp}(\lambda)\), \(X\sim N(\mu,\sigma^2)\), \(T\sim t_\nu\), \(Q\sim\chi^2_\nu\), and \(F\sim F_{\nu_1,\nu_2}\).</p></article>
+<article class="card searchable"><h3>AI parsing note</h3><p>Every displayed equation on this page is stored as standard LaTeX text inside the HTML and rendered visually by MathJax. Subscripts, superscripts, fractions, sums, integrals, conditional bars, and distribution parameters should therefore remain unambiguous to both readers and retrieval systems.</p></article>
+</div></section>
 <section class="week"><h2>Guidance for SureBo</h2><div class="grid">
 <article class="card searchable"><h3>Assessment sequence</h3><p>Start with an open-ended explanation. Test method selection, application to a new scenario, interpretation, assumptions, and distinction from related concepts. A correct calculation alone is not proof of understanding.</p></article>
 <article class="card searchable"><h3>Feedback sequence</h3><p>Identify what is correct, isolate the exact gap, give one targeted hint, permit another attempt, then reassess with a new question on the same concept.</p></article>
