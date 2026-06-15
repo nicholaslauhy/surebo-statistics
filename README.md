@@ -1,239 +1,341 @@
-# SureBo?
+# SureBo Statistics Knowledge Base
 
-**SureBo?** is a statistics proof-of-understanding AI agent designed to determine whether students truly understand a concept rather than merely recognise or repeat an AI-generated answer.
+The **SureBo Statistics Knowledge Base** is a structured collection of verified statistics concepts, worked questions, misconception patterns, and assessment criteria used to support the SureBo? proof-of-understanding AI agent.
 
-Built for the **Microsoft Buildathon**, the agent is grounded in verified learning materials and worked questions from **NUS ST2334: Probability and Statistics**.
+It is designed to help the agent assess whether a student genuinely understands a statistical concept rather than merely recognising or repeating a correct answer.
 
-Instead of immediately providing solutions, SureBo? conducts an adaptive, oral-style assessment that asks students to explain their reasoning, apply concepts, distinguish between similar ideas, and interpret statistical results.
+The knowledge base is primarily aligned with concepts covered in **NUS ST2334: Probability and Statistics**.
 
-## The Problem
+## Purpose
 
-Generative AI can provide students with correct answers almost instantly. However, receiving or recognising a correct answer does not necessarily mean that the student understands the underlying concept.
+The knowledge base provides SureBo? with reliable and structured reference material for:
 
-Traditional quizzes may also overestimate understanding because students can:
+* Generating concept-focused assessment questions
+* Checking whether student explanations are accurate
+* Detecting common statistical misconceptions
+* Creating targeted follow-up questions
+* Distinguishing partial understanding from genuine concept ownership
+* Producing evidence-based Concept Passports
+* Reducing unsupported or hallucinated explanations
 
-* Guess the correct option
-* Memorise formulas without understanding them
-* Follow worked solutions mechanically
-* Recognise familiar answer patterns
-* Use AI-generated responses without being able to explain the reasoning
+Unlike a standard collection of lecture notes, the knowledge base is organised around how understanding can be demonstrated and assessed.
 
-SureBo? addresses this gap by testing whether students can independently demonstrate ownership of a statistical concept.
+## What the Knowledge Base Contains
 
-## How It Works
+The repository may include the following types of content:
 
-The agent begins with a target concept or worked statistics question and conducts an adaptive assessment based on the student's responses.
+### Concept Summaries
 
-Rather than following a fixed list of questions, SureBo? changes its questioning strategy depending on the evidence collected.
+Clear explanations of important statistics concepts, including:
 
-The agent may ask the student to:
+* Core definitions
+* Mathematical intuition
+* Assumptions
+* Conditions for use
+* Common interpretations
+* Related concepts
+* Common points of confusion
 
-* Explain a concept in their own words
-* Justify why a method or formula is appropriate
-* Apply the concept to a new situation
-* Distinguish between commonly confused concepts
-* Interpret a statistical result in context
-* Identify and correct an incorrect line of reasoning
-* Explain what would change if the conditions of a question were modified
+### Worked Questions
 
-When the agent detects uncertainty or a misconception, it asks targeted follow-up questions to identify the exact source of the misunderstanding.
+Worked examples that demonstrate:
 
-## Key Features
+* How to identify the appropriate statistical method
+* How to apply formulas correctly
+* How to justify each step
+* How to interpret results in context
+* How to recognise incorrect approaches
 
-### Adaptive Oral-Style Assessment
+### Misconception Library
 
-SureBo? simulates the questioning style of a tutor or oral examiner. Each follow-up question is selected based on the student's previous response rather than being taken from a fixed question bank.
+A collection of common mistakes and misunderstandings, such as:
 
-### Precise Misconception Detection
+* Confusing independent and mutually exclusive events
+* Treating correlation as causation
+* Misinterpreting p-values
+* Assuming a large sample makes the population normally distributed
+* Confusing population parameters with sample statistics
+* Applying a probability distribution without checking its assumptions
+* Interpreting confidence intervals incorrectly
+* Using the correct calculation but giving the wrong contextual interpretation
 
-The agent does not simply label an answer as correct or incorrect. It identifies specific misconceptions, such as:
+Each misconception entry can include:
 
-* Confusing mutually exclusive and independent events
-* Misinterpreting a confidence interval
-* Using a statistical test without checking its assumptions
-* Treating correlation as evidence of causation
-* Applying the wrong probability distribution
-* Performing calculations correctly while interpreting the result incorrectly
+* The incorrect belief
+* Why it is incorrect
+* Indicators that a student may hold the misconception
+* Diagnostic questions
+* Corrective follow-up questions
+* Evidence required to demonstrate corrected understanding
 
-### Verified Course Grounding
+### Assessment Rubrics
 
-The agent is grounded in verified **NUS ST2334** course materials and worked questions. This helps keep its explanations, terminology, and assessment criteria aligned with the module's learning objectives.
+Rubrics define what counts as evidence that a student can:
 
-### Dynamic Questioning Strategy
+* **Explain** a concept
+* **Apply** it to a problem
+* **Distinguish** it from related concepts
+* **Interpret** results correctly
 
-SureBo? adjusts the type and difficulty of its questions depending on the student's demonstrated understanding.
+These rubrics help SureBo? evaluate understanding consistently instead of relying only on answer correctness.
 
-For example, it may move from:
+### Diagnostic Questions
 
-1. Definition and recall
-2. Explanation and reasoning
-3. Application to a new scenario
-4. Comparison with a similar concept
-5. Interpretation of results
+Questions designed to reveal how a student is reasoning.
 
-A student who gives a partially correct response may receive a diagnostic follow-up, while a student who demonstrates strong understanding may be given a transfer or edge-case question.
-
-### Evidence-Based Concept Passport
-
-At the end of the assessment, SureBo? generates a **Concept Passport** that summarises what the student has demonstrated.
-
-The passport evaluates whether the student can:
-
-* **Explain** the concept in their own words
-* **Apply** it to unfamiliar questions
-* **Distinguish** it from related or commonly confused concepts
-* **Interpret** results within the context of a problem
-
-It also records:
-
-* Evidence from the student's responses
-* Misconceptions detected
-* Areas of uncertainty
-* Recommended topics for revision
-* The current level of demonstrated concept ownership
-
-## Example Assessment Flow
+Examples include:
 
 ```text
-Agent:
-Why is the normal distribution appropriate for this question?
+Why is this probability distribution appropriate for the situation?
 
-Student:
-Because the sample size is large.
+What assumption must hold before this method can be used?
 
-Agent:
-A large sample size may allow the sampling distribution of the mean
-to be approximated as normal. Is that the same as saying the original
-population is normally distributed?
+How would your answer change if the sample size were smaller?
 
-Student:
-No. The population itself may still be non-normal.
+What is the difference between the population distribution and the
+sampling distribution?
 
-Agent:
-Good. What theorem supports the approximation, and what exactly does
-it tell us becomes approximately normal?
+Can the final numerical answer be correct even if the method used was
+inappropriate? Explain.
 ```
 
-The agent uses the student's responses as evidence rather than relying only on whether the final numerical answer is correct.
+### Transfer Questions
 
-## Concept Passport Example
+Transfer questions test whether students can apply a concept in a new or unfamiliar context rather than repeating a memorised procedure.
+
+These questions may involve:
+
+* Changing the context of a familiar problem
+* Modifying an assumption
+* Comparing two possible methods
+* Identifying an edge case
+* Explaining why a method fails
+* Interpreting the same result for different audiences
+
+## Knowledge Structure
+
+Each concept can be stored using a consistent format.
 
 ```text
-Concept: Central Limit Theorem
+Concept Name
 
-Explain:
-Demonstrated. The student explained that the theorem concerns the
-sampling distribution rather than the original population.
-
-Apply:
-Partially demonstrated. The student applied the theorem correctly
-when the sample size was large but was uncertain about small-sample
-conditions.
-
-Distinguish:
-Demonstrated. The student distinguished population normality from
-the approximate normality of the sampling distribution.
-
-Interpret:
-Needs improvement. The student had difficulty interpreting standard
-error in context.
-
-Misconception Detected:
-Initially assumed that a large sample size makes the population
-normally distributed.
-
-Recommended Revision:
-Review the difference between population distributions, sample
-distributions and sampling distributions.
+1. Definition
+2. Intuition
+3. Key Formulae
+4. Assumptions
+5. Conditions for Use
+6. Worked Example
+7. Common Misconceptions
+8. Diagnostic Questions
+9. Application Questions
+10. Distinction Questions
+11. Interpretation Questions
+12. Mastery Criteria
+13. Related Concepts
 ```
 
-## Intended Users
+A structured concept entry may look like this:
 
-SureBo? is designed for:
+```yaml
+concept: Central Limit Theorem
 
-* University students studying probability and statistics
-* Students revising for tutorials, tests or examinations
-* Educators who want stronger evidence of conceptual understanding
-* Tutors conducting formative assessments
-* Institutions exploring responsible uses of AI in education
+definition:
+  The sampling distribution of the sample mean approaches a normal
+  distribution as the sample size increases, under suitable conditions.
 
-## Why SureBo? Is Different
+key_distinctions:
+  - Population distribution
+  - Sample distribution
+  - Sampling distribution
 
-Most educational AI tools focus on helping students obtain answers.
+common_misconceptions:
+  - A large sample size makes the population normally distributed.
+  - The theorem applies to every statistic.
+  - The sample observations themselves become normally distributed.
 
-SureBo? focuses on verifying whether students can defend and transfer their understanding.
+diagnostic_questions:
+  - What exactly becomes approximately normal?
+  - Does the original population need to be normally distributed?
+  - How does sample size affect the approximation?
 
-| Conventional AI Tutor              | SureBo?                                      |
-| ---------------------------------- | -------------------------------------------- |
-| Provides explanations and answers  | Requires the student to produce explanations |
-| Focuses on answer correctness      | Focuses on evidence of understanding         |
-| Uses a mostly fixed response style | Adapts its questioning strategy              |
-| May allow passive learning         | Encourages active retrieval and reasoning    |
-| Ends after solving the question    | Produces a Concept Passport                  |
-| Identifies that an answer is wrong | Identifies why the reasoning is wrong        |
+mastery_criteria:
+  explain:
+    Student explains that the theorem concerns the sampling distribution.
 
-## Technology
+  apply:
+    Student identifies when the approximation is reasonable.
 
-The prototype was developed using Microsoft AI technologies for the Microsoft Buildathon.
+  distinguish:
+    Student distinguishes population normality from sampling distribution
+    normality.
 
-The project uses:
+  interpret:
+    Student interprets the sample mean and standard error in context.
+```
 
-* Microsoft Copilot Studio
-* Grounded course knowledge sources
-* Adaptive conversational logic
-* Structured misconception tracking
-* Evidence-based assessment generation
-* Shareable agent deployment through a Microsoft-managed environment
+## Suggested Topic Coverage
 
-> The live agent is hosted under an institution-managed Microsoft account. As a result, the full solution package may not be available for public distribution. This repository documents the agent's design, workflow, features and evaluation approach.
+The knowledge base may cover areas such as:
 
-## Responsible AI Considerations
+### Probability
 
-SureBo? is intended as a formative learning and assessment-support tool rather than a replacement for instructors or formal examinations.
+* Sample spaces and events
+* Conditional probability
+* Independence
+* Bayes' theorem
+* Counting methods
+* Law of total probability
 
-Its design includes several safeguards:
+### Random Variables
 
-* Uses verified module materials as its primary knowledge source
-* Requests reasoning instead of accepting unsupported answers
-* Separates demonstrated understanding from uncertain understanding
-* Records evidence supporting each assessment
-* Avoids awarding concept mastery based on a single correct response
-* Highlights uncertainty when the available evidence is insufficient
-* Provides revision recommendations rather than only a final score
+* Discrete random variables
+* Continuous random variables
+* Expected value
+* Variance
+* Covariance
+* Transformations
 
-## Demo
+### Probability Distributions
 
-A project demonstration can be added here:
+* Bernoulli distribution
+* Binomial distribution
+* Geometric distribution
+* Poisson distribution
+* Uniform distribution
+* Exponential distribution
+* Normal distribution
 
-* **Live agent:** [Agent Link (only available for NUS students)](https://m365.cloud.microsoft/chat/?titleId=T_8de55795-d602-4752-1024-6bdf20dfde4b&source=embedded-builder)
-* **Demo video:** [Video Link](https://youtu.be/HHv0G7ei1vM)
-* **Canva Pitch Deck** [Canva Pitch Deck](https://canva.link/wfhsixx5d514xk3)
+### Sampling Distributions
+
+* Sample mean
+* Sample proportion
+* Standard error
+* Central Limit Theorem
+* Chi-square distribution
+* Student's t-distribution
+
+### Estimation
+
+* Point estimators
+* Bias
+* Consistency
+* Efficiency
+* Maximum likelihood estimation
+
+### Confidence Intervals
+
+* Confidence intervals for means
+* Confidence intervals for proportions
+* Interpretation of confidence levels
+* Margin of error
+* Sample size considerations
+
+### Hypothesis Testing
+
+* Null and alternative hypotheses
+* Test statistics
+* Rejection regions
+* p-values
+* Type I and Type II errors
+* Statistical power
+* One-tailed and two-tailed tests
+
+## How SureBo? Uses the Knowledge Base
+
+SureBo? retrieves relevant knowledge based on the concept being assessed.
+
+The agent uses the knowledge base to:
+
+1. Identify the target concept
+2. Retrieve verified explanations and assumptions
+3. Select an appropriate diagnostic question
+4. Analyse the student's reasoning
+5. Match the response against known misconceptions
+6. Choose a targeted follow-up question
+7. Collect evidence across multiple dimensions
+8. Generate a Concept Passport
+
+The agent is not intended to simply repeat content from the knowledge base. It uses the content as a reference for adaptive assessment.
+
+## Concept Passport Alignment
+
+Each concept is assessed across four dimensions:
+
+| Dimension   | Evidence Required                                           |
+| ----------- | ----------------------------------------------------------- |
+| Explain     | Student describes the concept accurately in their own words |
+| Apply       | Student uses the concept correctly in a new problem         |
+| Distinguish | Student separates the concept from similar ideas            |
+| Interpret   | Student explains the statistical meaning in context         |
+
+A student should not be marked as having mastered a concept based on one correct final answer alone.
+
+## Content Quality Guidelines
+
+Every knowledge entry should:
+
+* Use accurate statistical terminology
+* Clearly state assumptions and limitations
+* Separate formulas from interpretation
+* Avoid presenting shortcuts as universal rules
+* Include at least one misconception
+* Include diagnostic and transfer questions
+* Define what mastery looks like
+* Be understandable without relying on unexplained notation
+* Be reviewed before being used for assessment
+
+## Responsible Use
+
+The SureBo Statistics Knowledge Base is intended for educational and formative assessment purposes.
+
+It should not be used to:
+
+* Replace formal grading without educator oversight
+* Automatically assign high-stakes academic results
+* Redistribute copyrighted course material without permission
+* Claim that a student has mastered a concept based on limited evidence
+* Generate unsupported explanations outside the verified content
+
+The agent should clearly indicate uncertainty when the available evidence is insufficient.
+
+## Copyright and Access
+
+This repository does not publicly include copyrighted NUS teaching materials and is based on my own knowledge of NUS ST2334.
 
 ## Project Status
 
-SureBo? was developed as a prototype for the Microsoft Buildathon.
+The knowledge base was developed as part of the **SureBo?** prototype for the Microsoft Buildathon.
 
-Possible future developments include:
+Future improvements may include:
 
-* Supporting additional NUS statistics modules
-* Allowing educators to define their own concept rubrics
-* Tracking concept growth across multiple assessment sessions
-* Generating personalised revision plans
-* Providing an educator dashboard for class-level misconception trends
-* Comparing confidence with demonstrated understanding
-* Supporting diagrams, equations and handwritten working
-* Validating the assessment framework through student testing
+* Expanding coverage across all ST2334 topics
+* Creating machine-readable concept schemas
+* Adding misconception severity levels
+* Linking concepts through a knowledge graph
+* Adding prerequisite relationships
+* Introducing confidence scores for retrieved content
+* Supporting educator review and approval workflows
+* Tracking version history for each concept
+* Adding benchmark student responses
+* Evaluating misconception detection accuracy
 
-## Team
+## Related Project
 
-Developed by **Nicholas Lau** as part of the Microsoft Buildathon.
+**SureBo?** is the AI assessment agent that uses this knowledge base to conduct adaptive oral-style assessments and generate evidence-based Concept Passports.
 
-* GitHub: [Click Me!](https://github.com/nicholaslauhy/surebo-statistics)
+* Main agent repository: [Click Me!](https://github.com/nicholaslauhy/ai-agent-surebo)
+* Live agent link: [Click Me! (only for NUS students)](https://m365.cloud.microsoft/chat/?titleId=T_8de55795-d602-4752-1024-6bdf20dfde4b&source=embedded-builder)
+* Demo video: [Click Me!](https://youtu.be/HHv0G7ei1vM)
+
+## Author
+
+Developed by **Nicholas Lau** for the Microsoft Buildathon.
+
+* GitHub: [Click Me!](https://github.com/nicholaslauhy)
 * LinkedIn: [Click Me!](https://www.linkedin.com/in/nicholas-lau-688509292/)
 
 ## Acknowledgements
 
-This project was created using learning materials and worked questions associated with **NUS ST2334: Probability and Statistics**.
+This project draws on concepts associated with **NUS ST2334: Probability and Statistics**, but is in no way associated with the National University of Singapore.
 
-Course materials are used only as grounded educational references and are not redistributed in this public repository.
-
+All original course materials remain the property of their respective authors and institutions. Please use the knowledge in this website with discretion.
