@@ -1,0 +1,5 @@
+# Vim temporary and undo files
+*.un~
+*.swp
+*.swo
+*~
