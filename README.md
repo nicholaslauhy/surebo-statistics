@@ -201,28 +201,13 @@ Its design includes several safeguards:
 * Highlights uncertainty when the available evidence is insufficient
 * Provides revision recommendations rather than only a final score
 
-## Project Structure
-
-```text
-SureBo/
-├── README.md
-├── docs/
-│   ├── agent-workflow.md
-│   ├── assessment-framework.md
-│   └── responsible-ai.md
-├── screenshots/
-├── sample-assessments/
-├── concept-passport-examples/
-└── demo/
-```
-
 ## Demo
 
 A project demonstration can be added here:
 
-* **Live agent:** [Add shareable agent link]
-* **Demo video:** [Add video link]
-* **LinkedIn project post:** [Add LinkedIn link]
+* **Live agent:** [Agent Link (only available for NUS students)](https://m365.cloud.microsoft/chat/?titleId=T_8de55795-d602-4752-1024-6bdf20dfde4b&source=embedded-builder)
+* **Demo video:** [Video Link](https://youtu.be/HHv0G7ei1vM)
+* **Canva Pitch Deck** [Canva Pitch Deck](https://canva.link/wfhsixx5d514xk3)
 
 ## Project Status
 
@@ -241,15 +226,14 @@ Possible future developments include:
 
 ## Team
 
-Developed by **Ryan Tan** as part of the Microsoft Buildathon.
+Developed by **Nicholas Lau** as part of the Microsoft Buildathon.
 
-* GitHub: [Add GitHub profile]
-* LinkedIn: [Add LinkedIn profile]
-* Portfolio: [Add portfolio link]
+* GitHub: [Click Me!](https://github.com/nicholaslauhy/surebo-statistics)
+* LinkedIn: [Click Me!](https://www.linkedin.com/in/nicholas-lau-688509292/)
 
 ## Acknowledgements
 
 This project was created using learning materials and worked questions associated with **NUS ST2334: Probability and Statistics**.
 
-Course materials are used only as grounded educational references and are not redistributed in this public repository unless permission has been granted.
+Course materials are used only as grounded educational references and are not redistributed in this public repository.
 
